@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
-        android:text="12321312"
+        android:text="Tên bài hát"
         android:textSize="30sp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
@@ -26,7 +26,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textColor="@color/black"
-        android:text="12211231"
+        android:text="Tên ca sĩ"
         android:textSize="15sp"
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
@@ -139,7 +139,7 @@
             android:layout_width="wrap_content"
             android:layout_height="40dp"
             android:layout_weight="1"
-            android:src="@drawable/ic_repeat_2"
+            android:src="@drawable/ic_repeat_off"
             />
     </LinearLayout>
 </LinearLayout>

@@ -147,19 +147,29 @@ public class PlayFragment extends Fragment {
         playPauseButton();
 
         ivNext.setOnClickListener(v -> {
-            if (currentSongIndex < songList.size() - 1) {
-                currentSongIndex++;
+            if (isShuffle) {
+                Random random = new Random();
+                currentSongIndex = random.nextInt(songList.size()); // Play a random song
             } else {
-                currentSongIndex = 0;
+                if (currentSongIndex < songList.size() - 1) {
+                    currentSongIndex++;
+                } else {
+                    currentSongIndex = 0; // Go back to the first song if it's the last song
+                }
             }
             playSong(currentSongIndex);
         });
 
         ivPrev.setOnClickListener(v -> {
-            if (currentSongIndex > 0) {
-                currentSongIndex--;
+            if (isShuffle) {
+                Random random = new Random();
+                currentSongIndex = random.nextInt(songList.size()); // Play a random song
             } else {
-                currentSongIndex = songList.size() - 1;
+                if (currentSongIndex >0) {
+                    currentSongIndex--;
+                } else {
+                    currentSongIndex = songList.size()-1; // Go back to the first song if it's the last song
+                }
             }
             playSong(currentSongIndex);
         });
@@ -167,19 +177,21 @@ public class PlayFragment extends Fragment {
         ivRepeat.setOnClickListener(v -> {
             if (mediaPlayer.isLooping()) {
                 mediaPlayer.setLooping(false);
-                ivRepeat.setImageResource(R.drawable.ic_repeat_on);
+                ivRepeat.setImageResource(R.drawable.ic_repeat_off);
             } else {
                 mediaPlayer.setLooping(true);
-                ivRepeat.setImageResource(R.drawable.ic_repeat_off);
+                ivRepeat.setImageResource(R.drawable.ic_repeat_on);
             }
         });
 
         ivShuffer.setOnClickListener(v -> {
-            isShuffle = !isShuffle; // Toggle the shuffle mode
+            //isShuffle = !isShuffle; // Toggle the shuffle mode
             if (isShuffle) {
-                ivShuffer.setImageResource(R.drawable.ic_shuffle_on);
-            } else {
                 ivShuffer.setImageResource(R.drawable.ic_shuffer_off);
+                isShuffle = false;
+            } else {
+                ivShuffer.setImageResource(R.drawable.ic_shuffle_on);
+                isShuffle = true;
             }
         });
 
