@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "102238956784",
+    "project_id": "giuakymusicapp-5d0bb",
+    "storage_bucket": "giuakymusicapp-5d0bb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:102238956784:android:15b27f0c6943509cf42635",
+        "android_client_info": {
+          "package_name": "com.toan.giuaky_musicplayer"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAIFPnmumjI7M50vYO4QrK5vpDufUU38pk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
